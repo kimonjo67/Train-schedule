@@ -21,18 +21,18 @@ var config = {
   	var trainFirst = $("#first-input").val().trim();
 
   // Create a local temporary storage object for holding user input
-  var newTrain = {
+  var TrainInfo = {
   	name: trainName,
   	destination: trainDestination,
   	first: trainFirst
   };
 
   //upload new train data to the database
-  database.ref().push(newTrain);
+  database.ref().push(TrainInfo);
 
-  	console.log(newTrain.name);
-  	console.log(newTrain.destination);
-  	console.log(newTrain.first);
+  	console.log(TrainInfo.name);
+  	console.log(TrainInfo.destination);
+  	console.log(TrainInfo.first);
 
   //Alert
   alert("New train added here")
